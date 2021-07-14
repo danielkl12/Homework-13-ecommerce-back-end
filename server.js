@@ -3,6 +3,15 @@ const routes = require('./routes');
 const sequelize = require('sequelize');
 // import sequelize connection
 
+
+var Project = sequelize.import(__dirname + "./models")
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define("Project", {
+    name:DataTypes.STRING,
+    description:DataTypes.TEXT
+  })
+}
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 

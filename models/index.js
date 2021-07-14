@@ -19,7 +19,7 @@ foreign_key: 'category_id'
 
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongstoMany(Tag, {
+Product.belongsToMany(Tag, {
   through: ProductTag,
   foreign_key: 'product_id'
 
@@ -27,7 +27,7 @@ Product.belongstoMany(Tag, {
 
 
 // Tags belongToMany Products (through ProductTag)
-Tag.belongstoMany(Product, {
+Tag.belongsToMany(Product, {
   through: ProductTag,
   foreign_key: 'tag_id'
 })
